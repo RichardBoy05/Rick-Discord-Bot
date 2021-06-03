@@ -10,7 +10,7 @@ bot.login(process.env.token); //configuration
 bot.on("message", (message) =>{
 
     if (message.content == '!rick'){
-        message.channel.send("Presente!");
+        message.channel.send("Present!");
     }
 
 })
