@@ -1,19 +1,19 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 
-var token = 'ODQ5OTQxMDI2MzQ4NzI4MzUw.YLifQw.EujYOv5mRfJa7zdwZAwo_v_leMk';
-
 bot.login(process.env.token); //configuration
 
 //here starts the code
 
+const prefix = "r/"; //prefix to invocate a command of the bot
+
 bot.on("message", (message) =>{
 
-    if (message.content == '!rick'){
-
-        message.channel.send("Ci sono!");
-
+    if (message.content == prefix + "rick"){ //checks if the bot is online or not
+        message.channel.send("Agli ordini!");
     }
+
+
 
 })
 
