@@ -14,7 +14,11 @@ bot.on("message", (message) =>{
         message.channel.send("Agli ordini!");
     }
 
-    noswear.warnsystem();
+    for (var i = 0; i < noswear.badwords.length; i++){ //check bad words in messages
+        if (message.content == noswear.badwords[i]){
+            message.channel.send("Evita di esprimerti in questo modo!!");
+        }
+    }
 
 
 })
