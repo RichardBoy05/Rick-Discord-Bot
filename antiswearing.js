@@ -2,5 +2,17 @@
 
 const badwords = ["cazzo", "figa", "merda", "porco", "porca", "troia", "puttana"];
 
+function checkText(message){
 
-module.exports = { badwords };
+    for (var i = 0; i < badwords.length; i++){ //returns true if the message contains bad words
+        if (message.toLowerCase() == badwords[i]){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+}
+
+
+module.exports = { checkText };
