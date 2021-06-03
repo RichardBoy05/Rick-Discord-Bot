@@ -15,7 +15,6 @@ bot.on("message", (message) =>{
         
     }
 
-message.channel.send(noswear.checkText(message.content));
 
     if (noswear.checkText(message.content) == true){
         message.channel.send("Evita di esprimerti in questo modo!! "+ message.author.toString());
