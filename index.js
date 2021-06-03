@@ -16,7 +16,7 @@ bot.on("message", (message) =>{
     }
 
 
-    if (noswear.checkText(message.content) == true){
+    if (noswear.checkText(message.content.toLowerCase()) == true){
         message.channel.send("Evita di esprimerti in questo modo!! "+ message.author.toString());
     }
 
