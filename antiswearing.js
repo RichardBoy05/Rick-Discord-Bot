@@ -30,12 +30,13 @@ function countWords(revtext){ // returns an array which contains the words of th
     while (spacePos != -1){
       
       spacePos = text.indexOf(" ");
-      appendItem(result, text.substring(0,spacePos));
+      result.push(text.substring(0,spacePos));
       text = text.substring(spacePos+1, text.length);
       
     }
-    removeItem(result,result.length - 1);
-    appendItem(result, text);
+
+    result.removeItem(result,result.length - 1);
+    result.push(text);
     
     return result;
   }
