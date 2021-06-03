@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const noswear = require("./antiswearing.js");
 
 bot.login(process.env.token); //configuration
 
@@ -13,6 +14,7 @@ bot.on("message", (message) =>{
         message.channel.send("Agli ordini!");
     }
 
+    noswear.warnsystem();
 
 
 })
