@@ -2,14 +2,5 @@
 
 const badwords = ["cazzo", "figa", "merda", "porco", "porca", "troia"];
 
-function warnsystem(){
 
-    for (var i = 0; i < badwords.length; i++){
-        if (message.content == badwords[i]){
-            message.channel.send("Evita di esprimerti in questo modo!!");
-        }
-    }
-
-}
-
-module.exports = { warnsystem };
+module.exports = { badwords };
