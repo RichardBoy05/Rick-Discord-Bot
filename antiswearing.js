@@ -11,3 +11,7 @@ async function warnsystem(){
     }
 
 }
+
+module.exports = {
+    warnsystem()
+};
