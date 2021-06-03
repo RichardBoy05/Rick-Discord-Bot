@@ -2,7 +2,7 @@
 
 const badwords = ["cazzo", "figa", "merda", "porco", "porca", "troia"];
 
-function warnsystem(){
+async function warnsystem(){
 
     for (var i = 0; i < badwords.length; i++){
         if (message.content == badwords[i]){
