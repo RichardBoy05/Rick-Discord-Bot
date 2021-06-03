@@ -4,15 +4,41 @@ const badwords = ["cazzo", "figa", "merda", "porco", "porca", "troia", "puttana"
 
 function checkText(message){
 
-    for (var i = 0; i < badwords.length; i++){ //returns true if the message contains bad words
-        if (message == badwords[i]){
-            return true;
+
+    var words = countWords(message);
+
+    for (var i = 0; i < words.length; i++){
+        for (var f = 0; f < badwords.length; f++){
+            if (words[i] == badwords[f]){
+                return true;
         }
     }
+}
 
     return false;
 
 }
+
+
+function countWords(revtext){ // returns an array which contains the words of the message
+    var result = [];  
+    
+    var text = revtext;
+    
+    var spacePos = 0;
+    
+    while (spacePos != -1){
+      
+      spacePos = text.indexOf(" ");
+      appendItem(result, text.substring(0,spacePos));
+      text = text.substring(spacePos+1, text.length);
+      
+    }
+    removeItem(result,result.length - 1);
+    appendItem(result, text);
+    
+    return result;
+  }
 
 
 module.exports = { checkText };
