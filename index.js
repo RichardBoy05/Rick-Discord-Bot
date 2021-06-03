@@ -12,7 +12,10 @@ bot.on("message", (message) =>{
 
     if (message.content == prefix + "rick"){ //checks if the bot is online or not
         message.channel.send("Agli ordini!");
+        
     }
+
+    message.channel.send(message.content.toLowerCase);
 
     for (var i = 0; i < noswear.badwords.length; i++){ //check bad words in messages
         if (message.content.toLowerCase == noswear.badwords[i]){
