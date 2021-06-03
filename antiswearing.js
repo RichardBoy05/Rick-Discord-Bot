@@ -5,12 +5,12 @@ const badwords = ["cazzo", "figa", "merda", "porco", "porca", "troia", "puttana"
 function checkText(message){
 
     for (var i = 0; i < badwords.length; i++){ //returns true if the message contains bad words
-        if (message.toLowerCase() == badwords[i]){
+        if (message == badwords[i]){
             return true;
-        } else {
-            return false;
         }
     }
+
+    return false;
 
 }
 
