@@ -10,7 +10,11 @@ bot.login(process.env.token); //configuration
 bot.on("message", (message) =>{
 
     if (message.content == '!rick'){
+<<<<<<< HEAD
         message.channel.send("Ci sono!");
+=======
+        message.channel.send("Present!");
+>>>>>>> a8a297fa868a8cdfda96b481caad11052645a65c
     }
 
 })
