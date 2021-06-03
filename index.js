@@ -14,7 +14,7 @@ bot.on("message", (message) =>{
         message.channel.send("Agli ordini!");
     }
 
-    noswear.warnsystem();
+    console.log(noswear);
 
 
 })
