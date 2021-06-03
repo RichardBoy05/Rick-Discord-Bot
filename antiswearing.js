@@ -12,6 +12,4 @@ function warnsystem(){
 
 }
 
-module.export = {
-    warnsystem
-};
+module.exports = { warnsystem };
