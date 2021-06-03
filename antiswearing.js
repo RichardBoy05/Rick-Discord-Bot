@@ -35,7 +35,7 @@ function countWords(revtext){ // returns an array which contains the words of th
       
     }
 
-    result.removeItem(result,result.length - 1);
+    result.splice(result.length - 1);
     result.push(text);
     
     return result;
