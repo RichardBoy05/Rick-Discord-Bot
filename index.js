@@ -16,7 +16,7 @@ bot.on("message", (message) =>{
     }
 
     for (var i = 0; i < noswear.badwords.length; i++){ //check bad words in messages
-        if (message.content.toLowerCase == noswear.badwords[i]){
+        if (message.content.toLowerCase() == noswear.badwords[i]){
             message.channel.send("Evita di esprimerti in questo modo!! "+ message.author.toString());
         }
     }
