@@ -11,3 +11,7 @@ export function warnsystem(){
     }
 
 }
+
+module.export = {
+    warnsystem
+};
