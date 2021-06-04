@@ -26,13 +26,13 @@ bot.on("message", (message) =>{
         var options = {'weekday': 'long', 'month': '2-digit', 'day': '2-digit'}; //defines the structure of the date
         var date = new Date(); //gets the date
         var dateString = date.toLocaleString('it-IT', options)+ "/" + date.getFullYear() + " alle ore " +
-        +(date.getHours()<10?'0':'') + date.getHours() + ":" + (date.getMinutes()<10?'0':'') + date.getMinutes(); //builds the string of the date
+        + (date.getHours()<10?"0":"") + date.getHours() + ":" + (date.getMinutes()<10?"0":"") + date.getMinutes(); //builds the string of the date
         
         
         
         message.delete(); //delete the bad message
         message.channel.send("La volgarità non è ammessa nel server!"+ message.author.toString()); //replaces the bad message
-        warning_channel_id.send(""+ message.author.toString()+" WARNING! L'utilizzo di termini volgari nel server può portarti"+ //sends the warning to the warnings-bans channel
+        warning_channel_id.send(message.author.toString()+" WARNING! L'utilizzo di termini volgari nel server può portarti"+ //sends the warning to the warnings-bans channel
         " a venir mutato o bannato.\n Messaggio incriminato: '"+
         message.content+"';\n Canale: '"+
         message.channel.name+"';\n Data: "+
