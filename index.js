@@ -26,7 +26,7 @@ bot.on("message", (message) =>{
         var options = {'weekday': 'long', 'month': '2-digit', 'day': '2-digit'}; //defines the structure of the date
         var date = new Date(); //gets the date
         var dateString = date.toLocaleString('it-IT', options)+ "/" + date.getFullYear() + " alle ore " +
-        + (date.getHours()<10?"0":"") + date.getHours() + ":" + (date.getMinutes()<10?"0":"") + date.getMinutes(); //builds the string of the date
+        + (date.getHours().toString().length < 2?"0":"") + date.getHours() + ":" + (date.getMinutes()<10?"0":"") + date.getMinutes(); //builds the string of the date
         
         
         
