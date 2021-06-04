@@ -25,7 +25,7 @@ bot.on("message", (message) =>{
         warning_channel_id.send(""+ message.author.toString()+" WARNING! L'utilizzo di termini volgari nel server può portati a venir mutato o bannato.\n Messaggio incriminato: '"+
         message.content+"';\n Canale: '"+
         message.channel.name+"';\n Data: "+
-        date.toDateString+".");
+        date.toDateString()+".");
         
 
 
