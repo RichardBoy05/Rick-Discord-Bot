@@ -1,6 +1,6 @@
 // this file contains the code to avoid swearing in the server
 
-const badwords = ["cazzo", "figa", "fica", "merda", "porco", "porca", "troia", "puttana", "vaffanculo", "bastardo", "bastarda", "zoccola", "negro", "coglione", "ricchione", "minchia", "mignotta", "frocio", "finocchio", "ditalino", "stronzo", "stronza", "ano", "vagina"];
+const badwords = ["cazzo", "figa", "fica", "merda", "porco", "porca", "troia", "puttana", "vaffanculo", "bastardo", "bastarda", "zoccola", "negro", "coglione", "coglioni", "ricchione", "minchia", "mignotta", "frocio", "finocchio", "ditalino", "stronzo", "stronza", "ano", "vagina"];
 
 function checkText(message){
 
