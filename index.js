@@ -18,14 +18,14 @@ bot.on("message", (message) =>{
 
     if ((noswear.checkText(message.content.toLowerCase()) == true) && message.channel.name != "warnings-bans"){
         var warning_channel_id = bot.channels.cache.get("850329118914641951");
-        var date = new Date();
-        var stringDate = date.getDay().toString() +"/"+ date.getMonth().toString() +"/"+ date.getFullYear().toString()+ " alle ore "+ date.getHours() +":"+ date.getMinutes();
+        var options = {'weekday': 'long', 'month': '2-digit', 'day': '2-digit'};
+        var date = new Date().toLocaleString('it-IT', options);
         message.delete();
         message.channel.send("La volgarità non è ammessa nel server!"+ message.author.toString());
         warning_channel_id.send(""+ message.author.toString()+" WARNING! L'utilizzo di termini volgari nel server può portati a venir mutato o bannato.\n Messaggio incriminato: '"+
         message.content+"';\n Canale: '"+
         message.channel.name+"';\n Data: "+
-        date.toDateString()+".");
+        date+".");
         
 
 
