@@ -21,8 +21,7 @@ bot.on("message", (message) =>{
         message.delete();
         message.channel.send("La volgarità non è ammessa nel server!"+ message.author.toString());
         warning_channel_id.send(""+ message.author.toString()+" WARNING! L'utilizzo di termini volgari nel server può portati a venir mutato o bannato.\n Messaggio incriminato: '"+
-        message.content+"'. /n Canale: "+
-        message.channel.id);
+        message.content+"'. /n Canale:");
         
 
 
