@@ -16,7 +16,7 @@ bot.on("message", (message) =>{
     }
 
 
-    if (noswear.checkText(message.content.toLowerCase()) == true){
+    if ((noswear.checkText(message.content.toLowerCase()) == true) && message.channel.name != "warnings-bans"){
         var warning_channel_id = bot.channels.cache.get("850329118914641951");
         message.delete();
         message.channel.send("La volgarità non è ammessa nel server!"+ message.author.toString());
