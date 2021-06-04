@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const noswear = require("./antiswearing.js");
-const warning_channel_id = bot.channels.cache.get("850329118914641951");
 
 bot.login(process.env.token); //configuration
 
@@ -18,6 +17,7 @@ bot.on("message", (message) =>{
 
 
     if (noswear.checkText(message.content.toLowerCase()) == true){
+        var warning_channel_id = bot.channels.cache.get("850329118914641951");
         message.delete();
         message.channel.send("La volgarità non è ammessa nel server!"+ message.author.toString());
         warning_channel_id.send(""+ message.author.toString()+" WARNING! L'utilizzo di termini volgari nel server può portati a venir mutato o bannato.\n Messaggio incriminato: '"+
