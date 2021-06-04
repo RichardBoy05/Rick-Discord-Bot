@@ -1,27 +1,27 @@
 // this file contains the code to avoid swearing in the server
 
-const badwords = ["cazzo", "figa", "fica", "merda", "porco", "porca", "troia", "puttana", "vaffanculo", "bastardo", "bastarda", "zoccola", "negro", "coglione", "coglioni", "ricchione", "minchia", "mignotta", "frocio", "finocchio", "ditalino", "stronzo", "stronza", "ano", "vagina"];
+const badwords = ["cazzo", "figa", "fica", "merda", "porco", "porca", "troia", "puttana", "vaffanculo", "bastardo", "bastarda", "zoccola",
+"negro", "coglione", "coglioni", "ricchione", "minchia", "mignotta", "frocio", "finocchio", "ditalino", "stronzo", "stronza", "ano", "vagina"]; //list of bad words
 
 function checkText(message){
-
 
     var words = countWords(message);
 
     for (var i = 0; i < words.length; i++){
         for (var f = 0; f < badwords.length; f++){
             if (words[i] == badwords[f]){
-                return true;
+                return true; // if there's a bad word
         }
     }
 }
 
-    return false;
+    return false; // if there isn't  a bad word
 
 }
 
 
 
-function countWords(revtext){ // returns an array which contains the words of the message
+function countWords(revtext){ // returns an array of the different words of the message
     var result = [];  
     
     var text = revtext;
@@ -43,4 +43,4 @@ function countWords(revtext){ // returns an array which contains the words of th
   }
 
 
-module.exports = { checkText };
+module.exports = { checkText }; // exports the checkText function so it will be usable outside this file
