@@ -17,6 +17,7 @@ bot.on("message", (message) =>{
 
 
     if (noswear.checkText(message.content.toLowerCase()) == true){
+        message.delete();
         message.channel.send("Evita di esprimerti in questo modo!! "+ message.author.toString());
     }
 
