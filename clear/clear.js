@@ -8,10 +8,11 @@ function clearChat(data){
         }
 
         var count = data.content.slice(8);
-        count = count.parseInt();
+        count = parseInt(count);
 
         if(!count){
             data.channel.send("Inserisci un numero valido!");
+            return
         }
 
         data.channel.bulkDelete(count, true);
