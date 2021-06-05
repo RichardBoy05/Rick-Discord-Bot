@@ -3,8 +3,10 @@
 const badwords = ["cazzo", "figa", "fica", "merda", "porco", "porca", "troia", "puttana", "vaffanculo", "bastardo", "bastarda", "zoccola",
 "negro", "coglione", "coglioni", "ricchione", "minchia", "mignotta", "frocio", "finocchio", "ditalino", "stronzo", "stronza", "ano", "vagina"]; //list of bad words
 
-function checkText(message){
 
+
+
+function checkText(message){
     var words = countWords(message);
 
     for (var i = 0; i < words.length; i++){
@@ -14,26 +16,22 @@ function checkText(message){
         }
     }
 }
-
     return false; // if there isn't  a bad word
-
 }
 
 
 
+
 function countWords(revtext){ // returns an array of the different words of the message
-    var result = [];  
-    
-    var text = revtext;
-    
+
+    var result = [];    
+    var text = revtext;  
     var spacePos = 0;
     
-    while (spacePos != -1){
-      
+    while (spacePos != -1){     
       spacePos = text.indexOf(" ");
       result.push(text.substring(0,spacePos));
-      text = text.substring(spacePos+1, text.length);
-      
+      text = text.substring(spacePos+1, text.length);    
     }
 
     result.splice(result.length - 1);
@@ -43,7 +41,9 @@ function countWords(revtext){ // returns an array of the different words of the 
   }
 
 
-  function warnsystem(data, bot){
+
+  
+function warnsystem(data, bot){
 
     if ((checkText(data.content.toLowerCase()) == true) && data.channel.name != "warnings-bans"){ //check the content of the message and compare it to a list
         // of bad words 
