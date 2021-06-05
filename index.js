@@ -19,7 +19,7 @@ bot.on("message", (message) =>{
     clear.clearChat(message); // command to remove a certain amount of messages in a channel (r/clear)
 
     if (message.content == "r/ciao"){ // checks if the bot is online or not
-        message.channel.send("**Regole per una buona convivenza:** \n\n"+
+        message.channel.send("**Regole per una buona convivenza:** \n\n"
        + "- No al linguaggio scurrile o aggressivo.\n"
        + "- Non siate sessisti, razzisti, volgari.\n"
        + "- Meglio non parlare di politica o religione.\n"
