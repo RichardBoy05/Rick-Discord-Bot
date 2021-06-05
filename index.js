@@ -47,7 +47,7 @@ bot.on("message", (message) =>{
     }
 
 
-    clear.clearChat();
+    clear.clearChat(message);
 
     
 
@@ -61,9 +61,5 @@ bot.on("message", (message) =>{
 
 
 })
-
-    
-    
-    module.exports=  { Discord, bot, prefix };
 
 
