@@ -22,3 +22,14 @@ bot.on("message", (message) =>{
 })
 
 
+
+bot.on("guildMemberAdd", (member) =>{
+    bot.channels.cache.get("849212228716593152").send("Benvenuto nel server " + member.toString() +
+    "\:smile:. Ti auguriamo una buona permanenza! Sei il membro numero " + member.guild.memberCount);
+})
+
+
+
+bot.on("guildMemberRemove", (member) =>{
+    bot.channels.cache.get("849212228716593152").send(member.toString+" ha deciso di abbandonarci...");
+})
