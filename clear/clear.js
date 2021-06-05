@@ -7,7 +7,7 @@ function clearChat(data){
             return
         }
 
-        var count = data.content.slice(7);
+        var count = data.content.slice(8);
         count = count.parseInt();
 
         if(!count){
