@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const noswear = require("./antiswearing/antiswearing.js");
+const clear = require("./clear/clear.js");
+
 
 bot.login(process.env.token); //configuration
 
@@ -14,6 +16,9 @@ bot.on("message", (message) =>{
         message.channel.send("Agli ordini!");
         
     }
+
+
+    /////////////////////////////////////////////
 
 
     if ((noswear.checkText(message.content.toLowerCase()) == true) && message.channel.name != "warnings-bans"){ //check the content of the message and compare it to a list
@@ -37,12 +42,28 @@ bot.on("message", (message) =>{
         message.content+"';\n Canale: '"+
         message.channel.name+"';\n Data: "+
         dateString+".");
-        
-
+    
 
     }
 
 
+    clear.clearChat();
+
+    
+
+    
+
+    /////////////////////////////////////////////
+
+
+
+
+
+
 })
+
+    
+    
+    module.exports=  { Discord, bot, prefix };
 
 
