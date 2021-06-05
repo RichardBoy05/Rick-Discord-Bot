@@ -10,31 +10,13 @@ bot.login(process.env.token); //configuration
 
 bot.on("message", (message) =>{
 
-    if (message.content == "r/rick"){ //checks if the bot is online or not
-        message.channel.send("Agli ordini!");
-        
+    if (message.content == "r/rick"){ // checks if the bot is online or not
+        message.channel.send("Agli ordini!");    
     }
 
+    noswear.warnsystem(message, bot); // censure bad words and warns users who used them
 
-    /////////////////////////////////////////////
-
-
-    
-
-    noswear.warnsystem(message, bot);
-
-
-    clear.clearChat(message);
-
-    
-
-    
-
-    /////////////////////////////////////////////
-
-
-
-
+    clear.clearChat(message); // command to remove a certain amount of messages in a channel (r/clear)
 
 
 })
