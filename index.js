@@ -31,5 +31,5 @@ bot.on("guildMemberAdd", (member) =>{
 
 
 bot.on("guildMemberRemove", (member) =>{
-    bot.channels.cache.get("849212228716593152").send(member.toString()+" ha deciso di abbandonarci...Che loser!");
+    bot.channels.cache.get("849212228716593152").send(member.toString()+" ha deciso di abbandonarci 😢 ...Che loser!");
 })
