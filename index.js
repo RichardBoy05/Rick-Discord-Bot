@@ -19,8 +19,7 @@ bot.on("message", (message) =>{
     clear.clearChat(message); // command to remove a certain amount of messages in a channel (r/clear)
 
     if (message.content == "r/ciao"){ // checks if the bot is online or not
-        message.channel.send("**Regole per una buona convivenza:** \n"+
-
+        message.channel.send("**Regole per una buona convivenza:** \n\n"+
        + "- No al linguaggio scurrile o aggressivo.\n"
        + "- Non siate sessisti, razzisti, volgari.\n"
        + "- Meglio non parlare di politica o religione.\n"
@@ -34,10 +33,10 @@ bot.on("message", (message) =>{
        + "- Non iniziate una nuova discussione se non si è conclusa la precedente.\n"
        + "- Nelle chat vocali non sovrapponete la vostra voce a quella degli altri, attendete che un utente concluda l'espressione di un concetto prima di intervenire.\n"
        + "- Siate gentili e cordiali con i nuovi entrati.\n"
-       + "- Rispondete alle richieste di aiuto in chat.\n"
+       + "- Rispondete alle richieste di aiuto in chat.\n\n"
         
         +"_Buona permanenza!_  ~ **[OWNER] JustAPuzwick**")
-        .then(msg => msg.react("✔️"));   
+        .then(msg => msg.react("✅"));   
     }
 
 
