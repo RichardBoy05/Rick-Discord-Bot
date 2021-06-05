@@ -1,7 +1,7 @@
 
-function clearChat(command){
-    if (command.content == "r/ciao"){ //checks if the bot is online or not
-        command.channel.send("Funge!");
+function clearChat(data){
+    if (data.content == "r/ciao"){ //checks if the bot is online or not
+        data.channel.send("Funge!");
         
     }
 }
