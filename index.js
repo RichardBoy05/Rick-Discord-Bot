@@ -38,8 +38,11 @@ bot.on("guildMemberRemove", (member) =>{ // triggers when someone leaves the ser
 bot.on("messageReactionAdd", async function(messageReaction, user){
 
     if(user.bot) return
-    if (messageReaction.member.roles.cache.has("849207774541250590")){
-        message.channel.send("Error but gggs");
-    }
+    if (!messageReaction.emoji.name == ":white_check_mark:") return
+    
+    messageReaction.message.channel.send("Per ora funge!");
+        
+    
+    
 
 })
