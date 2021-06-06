@@ -38,7 +38,7 @@ bot.on("guildMemberRemove", (member) =>{ // triggers when someone leaves the ser
 bot.on("messageReactionAdd", async function(messageReaction, user){
 
     if(user.bot) return
-    if (!messageReaction.emoji.name == ":white_check_mark:") return
+    if (messageReaction.emoji.name != ":white_check_mark:") return
     
     messageReaction.message.channel.send("Per ora funge!");
         
