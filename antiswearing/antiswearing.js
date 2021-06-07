@@ -45,7 +45,7 @@ function countWords(revtext){ // returns an array of the different words of the 
   
 function warnsystem(data, bot){
 
-    if ((checkText(data.content.toLowerCase()) == true) && data.channel.name != "warnings-bans"){ //check the content of the message and compare it to a list
+    if ((checkText(data.content.toLowerCase()) == true) && data.channel.name != "𝗐𝖺𝗋𝗇𝗂𝗇𝗀𝗌-𝖻𝖺𝗇𝗌"){ //check the content of the message and compare it to a list
         // of bad words 
 
     var warning_channel_id = bot.channels.cache.get("850329118914641951"); // id of the warning-bans channel
