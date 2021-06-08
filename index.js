@@ -46,7 +46,7 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
 
     if(messageReaction._emoji.name === "✅"){
         if(messageReaction.message.channel.id = "849258973764386847"){
-            messageReaction.users.remove();
+            messageReaction.user.remove();
         }
     }
     
