@@ -18,6 +18,10 @@ bot.on("message", (message) =>{
 
     clear.clearChat(message); // command to remove a certain amount of messages in a channel (r/clear)
 
+    if(message.content.startsWith("Regole")){
+        message.react("✅");
+        }
+
 })
 
 
