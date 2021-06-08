@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const bot = new Discord.Client();
+const bot = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });
 const noswear = require("./antiswearing/antiswearing.js");
 const clear = require("./clear/clear.js");
 
@@ -37,10 +37,16 @@ bot.on("guildMemberRemove", (member) =>{ // triggers when someone leaves the ser
 
 bot.on("messageReactionAdd", async function(messageReaction, user){
 
-    //if(user.bot) return
-    //if (messageReaction.emoji.name != ":white_check_mark:") return
+    if(user.bot) return
+    if (messageReaction.message.partial) await messageReaction.message.fetch();
+
+    if(messageReaction._emoji.name === "✅"){
+        if(messageReaction.message.channel.id = "849258973764386847"){
+            messageReaction.users.remove();
+        }
+    }
     
-    messageReaction.message.channel.send("Per ora funge!");
+    
         
     
     
