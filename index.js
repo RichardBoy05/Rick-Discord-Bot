@@ -50,9 +50,9 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
             messageReaction.message.reactions.removeAll();
             
 
-            message.client.channels.fetch("849258973764386847").then(channel => {
+            messageReaction.message.client.channels.fetch("849258973764386847").then(channel => {
                 channel.messages.fetch("852187108483530782").then(message => {
-                    message.react("✅");
+                    messageReaction.message.react("✅");
                 })
             })
 
