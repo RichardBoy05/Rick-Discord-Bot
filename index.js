@@ -41,9 +41,9 @@ bot.on("guildMemberRemove", (member) =>{ // triggers when someone leaves the ser
 
 bot.on("messageReactionAdd", async function(reaction, Member){
 
-    /*if(user.bot) return
-    if (messageReaction.message.partial) await messageReaction.message.fetch();
-*/
+    //if(user.bot) return
+    if (reaction.message.partial) await messageReaction.message.fetch();
+
     if(Member.bot) return;
     if(reaction._emoji.name === "✅"){
         if(reaction.message.channel.id = "849258973764386847"){
