@@ -63,4 +63,3 @@ bot.on("messageReactionAdd", async function(reaction, Member){
     
     
 
-})
