@@ -39,17 +39,25 @@ bot.on("guildMemberRemove", (member) =>{ // triggers when someone leaves the ser
 
 
 
-bot.on("messageReactionAdd", async function(reaction, Member){
+bot.on("messageReactionAdd", async function(messageReaction, user){
 
-    //if(user.bot) return
-    if (reaction.message.partial) await messageReaction.message.fetch();
+    if(user.bot) return
+    if (messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if(Member.bot) return;
-    if(reaction._emoji.name === "✅"){
-        if(reaction.message.channel.id = "849258973764386847"){
-            reaction.message.reactions.cache.map(x=>{
-                if(x._emoji.name != reaction._emoji.name&&x.users.cache.has(Member.id)) x.users.remove(Member.id)
+    if(messagerReaction._emoji.name === "✅"){
+        if(messageReaction.message.channel.id = "849258973764386847"){
+
+            messageReaction.message.reactions.removeAll();
+            
+
+            message.client.channels.fetch("849258973764386847").then(channel => {
+                channel.messages.fetch("852187108483530782").then(message => {
+                    message.react("✅");
+                })
             })
+
+
+
         }
     }
 
