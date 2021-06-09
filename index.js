@@ -47,16 +47,14 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
     if(messageReaction._emoji.name === "✅"){
         if(messageReaction.message.channel.id = "849258973764386847"){
 
-            bot.channels.cache.get("849261160611971132").send("Cicardo è esploso!");
-
-           // messageReaction.message.reactions.removeAll();
+            messageReaction.message.reactions.removeAll();
             
 
-          //  message.client.channels.fetch("849258973764386847").then(channel => {
-              //  channel.messages.fetch("852187108483530782").then(message => {
-                   // message.react("✅");
-              //  })
-         //   })
+            message.client.channels.fetch("849258973764386847").then(channel => {
+                channel.messages.fetch("852187108483530782").then(message => {
+                    message.react("✅");
+                })
+            })
 
 
 
