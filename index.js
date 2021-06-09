@@ -44,7 +44,7 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
     if(user.bot) return
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
-    if(messagerReaction._emoji.name === "✅"){
+    if(messageReaction._emoji.name === "✅"){
         if(messageReaction.message.channel.id = "849258973764386847"){
 
             bot.channels.cache.get("849261160611971132").send("Cicardo è esploso!");
