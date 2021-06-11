@@ -41,6 +41,7 @@ bot.on("guildMemberRemove", (member) =>{ // triggers when someone leaves the ser
 
 bot.on("messageReactionAdd", async function(messageReaction, user){
 
+    try{
     if(user.bot) return
     if (messageReaction.message.partial) await messageReaction.message.fetch();
 
@@ -52,7 +53,8 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
                 channel.messages.fetch("852199373667303494").then(message => {
                     messageReaction.message.react("✅");
 
-                    const role = messageReaction.message.guild.roles.get("850718041901105163");
+                    const myGuild = bot.guilds.cache.get("849206621569548319");
+                    const role = myGuild.roles.cache.find(role => role.name === "Member");
                 
                     user.addRole(role);
 
@@ -62,6 +64,8 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
 
 
         }
+    }} catch {
+
     }
 
     
