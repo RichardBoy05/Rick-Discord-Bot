@@ -52,10 +52,9 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
                 channel.messages.fetch("852199373667303494").then(message => {
                     messageReaction.message.react("✅");
 
-                    const guildMember = messageReaction.message.guild.members.get(user.id);
                     const role = messageReaction.message.guild.roles.get("850718041901105163");
                 
-                    guildMember.addRole(role);
+                    user.addRole(role);
 
                 })
             })
