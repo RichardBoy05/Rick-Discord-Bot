@@ -53,16 +53,9 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
                     messageReaction.message.react("✅");
 
                     const guildMember = messageReaction.message.guild.members.get(user.id);
-                    const role = messageReaction.message.guild.roles.get("849207774541250590");
-
-                    if(guildMember.role == role) {
-                        bot.channels.cache.get("849258973764386847").send("Non hai il permesso!"); 
-                    }
-                   
-
-                    
-                    
-                    //guildMember.addRole(role);
+                    const role = messageReaction.message.guild.roles.get("850718041901105163");
+                
+                    guildMember.addRole(role);
 
                 })
             })
