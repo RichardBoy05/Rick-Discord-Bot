@@ -48,8 +48,9 @@ bot.on("messageReactionAdd", async function(messageReaction, user){
 
             var member = messageReaction.message.guild.members.cache.find(x => x.id == user.id);
             member.roles.add("850718041901105163");
+        }
    
-}
+});
 
 bot.on("messageReactionRemove", async function(messageReaction, user){
 
@@ -67,9 +68,3 @@ bot.on("messageReactionRemove", async function(messageReaction, user){
     
 
 });
-    
-    
-        
-    
-    
-
