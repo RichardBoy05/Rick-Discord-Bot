@@ -63,6 +63,7 @@ bot.on("messageReactionRemove", async function(messageReaction, user){
             member.roles.remove("850718041901105163");
    
 }
+    //
 
     
     
