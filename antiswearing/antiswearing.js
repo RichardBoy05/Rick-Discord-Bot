@@ -1,7 +1,8 @@
 // this file contains the code to avoid swearing in the server
 
 const badwords = ["cazzo", "figa", "fica", "merda", "porco", "porca", "troia", "puttana", "vaffanculo", "bastardo", "bastarda", "zoccola",
-"negro", "coglione", "coglioni", "ricchione", "minchia", "mignotta", "frocio", "finocchio", "ditalino", "stronzo", "stronza", "ano", "vagina"]; //list of bad words
+"negro", "coglione", "coglioni", "ricchione", "minchia", "mignotta", "frocio", "finocchio", "ditalino", "stronzo", "stronza", "ano", "vagina",
+"fottiti", "fottere", "sfottere", "sfotti"]; //list of bad words
 
 
 
