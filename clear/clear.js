@@ -1,4 +1,4 @@
-const index = require("../index.js");
+const prefix = "//"; // the prefix to execute every command of this bot
 
 function clearChat(data) {
 
