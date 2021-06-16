@@ -16,7 +16,7 @@ function clearChat(data) {
             return
         }
 
-        if (count > 100) {
+        if (count >= 100) {
             data.channel.send("Puoi eliminare al massimo 100 messaggi alla volta!");
             return
         }
