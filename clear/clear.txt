@@ -1,0 +1,3 @@
+-- Documentation of the clear function --
+
+1) Typing //clear [number] the bot will delete the last [number] messages on the channel where it's typed.
