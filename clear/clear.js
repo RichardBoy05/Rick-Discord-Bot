@@ -22,7 +22,7 @@ function clearChat(data) {
         }
 
         data.channel.bulkDelete(count + 1, true);
-        data.channel.send("Ho eliminato " + count + " messaggi!")
+        data.channel.send("Ho eliminato " + count + " messaggio/i!")
             .then(msg => {
                 msg.delete({ timeout: 3000 })
             })
