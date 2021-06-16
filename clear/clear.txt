@@ -2,3 +2,4 @@
 
 1) Typing //clear [number] the bot will delete the last [number] messages on the channel where it's typed.
 2) Only users with OWNER role have access to this command.
+3) The biggest number of messages deletable at once is 99.
