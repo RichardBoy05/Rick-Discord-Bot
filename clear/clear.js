@@ -10,7 +10,6 @@ function clearChat(data) {
 
         var count = data.content.slice(8);
         count = parseInt(count);
-        count --
 
         if (!count) {
             data.channel.send("Inserisci un numero valido!");
@@ -22,7 +21,7 @@ function clearChat(data) {
             return
         }
 
-        data.channel.bulkDelete(count, true);
+        data.channel.bulkDelete(count + 1, true);
         data.channel.send("Ho eliminato " + count + " messaggi!")
             .then(msg => {
                 msg.delete({ timeout: 3000 })
