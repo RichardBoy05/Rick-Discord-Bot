@@ -1,0 +1,3 @@
+-- Documentation of the rule system --
+
+1) This system forces the user to accept the rules before becoming a member and being able to see the other channels.
