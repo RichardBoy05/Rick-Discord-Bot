@@ -1,5 +1,5 @@
 
-function addedReaction(user, messageReaction) {
+async function addedReaction(user, messageReaction) {
 
     if (user.bot) return
     if (messageReaction.message.partial) await messageReaction.message.fetch();
@@ -13,7 +13,7 @@ function addedReaction(user, messageReaction) {
 
 
 
-function removedReaction(user, messageReaction) {
+async function removedReaction(user, messageReaction) {
 
     if (user.bot) return
     if (messageReaction.message.partial) await messageReaction.message.fetch();
