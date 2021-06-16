@@ -3,6 +3,7 @@ const bot = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] })
 const noswear = require("./antiswearing/antiswearing.js");
 const clear = require("./clear/clear.js");
 const rules = require("./rules/rules.js");
+const suggestions = require("./suggestions/suggestions.js");
 
 const prefix = "//"; // the prefix to execute every command of this bot
 
@@ -19,6 +20,8 @@ bot.on("message", (message) => {
     noswear.warnsystem(message, bot); // censure bad words and warns users who used them
 
     clear.clearChat(message); // command to remove a certain amount of messages in a channel (r/clear)
+
+    suggestions.makeSuggestion(message); // command to add a suggestion for the server
 
 
 })
