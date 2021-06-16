@@ -2,8 +2,8 @@ const prefix = "//";
 const makesugg_id = "851438938044104724";
 const allsugg_id = "851438971320795147";
 
-function makeSuggestion(message, bot) {
-    bot.channels.cache.get(allsugg_id).send("helo");
+function makeSuggestion(message, client) {
+    client.channels.cache.get(allsugg_id).send("helo");
     
 
     if (message.content.startsWith == prefix + "suggest" && message.channel.id == makesugg_id){
