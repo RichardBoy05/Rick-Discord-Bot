@@ -27,4 +27,4 @@ async function removedReaction(user, messageReaction) {
 }
 
 
-module.exports = {addedReaction, removedReaction}
+module.exports = { addedReaction, removedReaction }
