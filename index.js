@@ -21,7 +21,7 @@ bot.on("message", (message) => {
 
     clear.clearChat(message); // command to remove a certain amount of messages in a channel (r/clear)
 
-   // suggestions.makeSuggestion(message, bot); // command to add a suggestion for the server
+    suggestions.makeSuggestion(message, bot); // command to add a suggestion for the server
 
 
 })
