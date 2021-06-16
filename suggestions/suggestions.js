@@ -9,7 +9,11 @@ function makeSuggestion(message, client) {
     if (message.content.startsWith(prefix + "suggest") && message.channel.id == makesugg_id){
 
         var suggestion = message.content.slice(10);
-        var embed = new Discord.MessageEmbed();
+        var embed = new Discord.MessageEmbed()
+        .setColor("#0000ff")
+        .setTitle("Suggerimento")
+        .setAuthor("Richard")
+        .setDescription("Sperem");
 
         client.channels.cache.get(allsugg_id).send(embed);
 
