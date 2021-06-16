@@ -5,7 +5,7 @@ const allsugg_id = "851438971320795147";
 function makeSuggestion(message, client) {
     
 
-    if (message.content.startsWith == prefix + "suggest" && message.channel.id == makesugg_id){
+    if (message.content.startsWith(prefix + "suggest") && message.channel.id == makesugg_id){
 
         var suggestion = message.content.slice(10);
         var embed = new Discord.MessageEmbed();
