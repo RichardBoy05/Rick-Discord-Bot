@@ -4,7 +4,7 @@ const noswear = require("./antiswearing/antiswearing.js");
 const clear = require("./clear/clear.js");
 const rules = require("./rules/rules.js");
 
-const prefix = "/1";// the prefix to execute every command of this bot
+const prefix = "//"; // the prefix to execute every command of this bot
 
 bot.login(process.env.token); //configuration
 
@@ -59,6 +59,3 @@ bot.on("messageReactionRemove", async function (messageReaction, user) {
     rules.addedReaction(user, messageReaction);
 
 });
-
-
-module.exports = { prefix }
