@@ -1,14 +1,15 @@
+const Discord = require("discord.js");
 const prefix = "//";
 const makesugg_id = "851438938044104724";
 const allsugg_id = "851438971320795147";
 
-function makeSuggestion(message, client, ds) {
+function makeSuggestion(message, client) {
     
 
     if (message.content.startsWith(prefix + "suggest") && message.channel.id == makesugg_id){
 
         var suggestion = message.content.slice(10);
-        var embed = new ds.MessageEmbed();
+        var embed = new Discord.MessageEmbed();
 
         client.channels.cache.get(allsugg_id).send(embed);
 
