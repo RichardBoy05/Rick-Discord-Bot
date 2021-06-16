@@ -4,6 +4,7 @@ const noswear = require("./antiswearing/antiswearing.js");
 const clear = require("./clear/clear.js");
 const rules = require("./rules/rules.js");
 
+const prefix = "/\"; // the prefix to execute every command of this bot
 
 bot.login(process.env.token); //configuration
 
@@ -11,7 +12,7 @@ bot.login(process.env.token); //configuration
 
 bot.on("message", (message) => {
 
-    if (message.content == "//rick") { // checks if the bot is online or not
+    if (message.content == prefix + "rick") { // checks if the bot is online or not
         message.channel.send("Agli ordini!");
     }
 
@@ -58,3 +59,6 @@ bot.on("messageReactionRemove", async function (messageReaction, user) {
     rules.addedReaction(user, messageReaction);
 
 });
+
+
+module.exports = { prefix }
