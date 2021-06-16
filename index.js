@@ -56,6 +56,6 @@ bot.on("messageReactionAdd", async function (messageReaction, user) {
 
 bot.on("messageReactionRemove", async function (messageReaction, user) {
 
-    rules.addedReaction(user, messageReaction);
+    rules.removedReaction(user, messageReaction);
 
 });
