@@ -1,0 +1,4 @@
+ -- Documentation of the antiswearing system --
+  
+  1) The system checks every message sent in the server: if it does contain one of the non-allowed words (stored in badwords[])
+  it will remove the message and warn the user in the #warning-bans channel. 
