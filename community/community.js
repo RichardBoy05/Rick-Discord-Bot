@@ -10,10 +10,10 @@ function suggOrChall(message, client) {
         var suggestion = message.content.slice(10);
         if (suggestion == "") {
 
-            message.delete();
             client.channels.cache.get(channel_id).send("Inserisci un suggerimento valido!")
             .then(msg => {
                 msg.delete({ timeout: 3000 })})
+                message.delete();
 
             return        
         }
@@ -30,10 +30,10 @@ function suggOrChall(message, client) {
         var challenge = message.content.slice(12);
         if (challenge == "") {
 
-            message.delete();
             client.channels.cache.get(channel_id).send("Inserisci una challenge valida!")
             .then(msg => {
                 msg.delete({ timeout: 3000 })})
+                message.delete();
 
             return
         }
