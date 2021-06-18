@@ -74,7 +74,7 @@ function createEmbed(message, data, client, isSugg) {
 
             msg.edit(embed)
 
-        }
+        })
 
 
 
