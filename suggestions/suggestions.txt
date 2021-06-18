@@ -1,5 +1,0 @@
--- Documentation of the suggestions system --
-
-1) Using the command //suggest in the channel #make-suggestions will create and embed messsage in the channel #all-suggestions
-   with upvoats and downvotes reactions.
-2) The goal is to allow users to share their opinion and suggestions with the community and the staff.
