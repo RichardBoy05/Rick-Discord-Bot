@@ -13,7 +13,7 @@ function suggOrChall(message, client) {
             client.channels.cache.get(channel_id).send("Inserisci un suggerimento valido!")
             .then(msg => {
                 msg.delete({ timeout: 3000 })})
-                message.delete();
+                message.delete({ timeout: 3000 });
 
             return        
         }
@@ -33,7 +33,7 @@ function suggOrChall(message, client) {
             client.channels.cache.get(channel_id).send("Inserisci una challenge valida!")
             .then(msg => {
                 msg.delete({ timeout: 3000 })})
-                message.delete();
+                message.delete({ timeout: 3000 });
 
             return
         }
