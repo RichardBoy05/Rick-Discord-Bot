@@ -9,8 +9,13 @@ function suggOrChall(message, client) {
 
         var suggestion = message.content.slice(10);
         if (suggestion == "") {
-            client.channels.cache.get(channel_id).send("Inserisci un suggerimento valido!");
-            return
+
+            message.delete();
+            client.channels.cache.get(channel_id).send("Inserisci un suggerimento valido!")
+            .then(msg => {
+                msg.delete({ timeout: 3000 })})
+
+            return        
         }
 
         createEmbed(message, suggestion, client, true);
@@ -24,9 +29,13 @@ function suggOrChall(message, client) {
 
         var challenge = message.content.slice(12);
         if (challenge == "") {
-            client.channels.cache.get(channel_id).send("Inserisci una challenge valida!");
-            return
 
+            message.delete();
+            client.channels.cache.get(channel_id).send("Inserisci una challenge valida!")
+            .then(msg => {
+                msg.delete({ timeout: 3000 })})
+
+            return
         }
 
         createEmbed(message, challenge, client, false);
@@ -43,11 +52,11 @@ function suggOrChall(message, client) {
 
 function createEmbed(message, data, client, isSugg) {
 
-    // var embed = new Discord.MessageEmbed() // creating the embed message
-    // .setTitle("💡 Suggerimento di " + message.author.toString());
-    // isSugg == true ? embed.setColor("#07D3F8") : embed.setColor("#F87807");
+    var embed = new Discord.MessageEmbed() // creating the embed message
+    .setTitle("💡 Suggerimento di " + message.author.toString());
+    isSugg == true ? embed.setColor("#07D3F8") : embed.setColor("#F87807");
 
-    client.channels.cache.get(channel_id).send(data);
+    client.channels.cache.get(channel_id).send(embed);
 
 }
 
