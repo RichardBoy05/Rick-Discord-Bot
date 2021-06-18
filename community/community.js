@@ -15,6 +15,8 @@ function suggOrChall(message, client) {
 
         createEmbed(message, suggestion, client, true);
         message.delete();
+        return
+    }
 
         // suggestions
 
@@ -29,10 +31,10 @@ function suggOrChall(message, client) {
 
         createEmbed(message, challenge, client, false);
         message.delete();
+        return
 
         //challenges
 
-    }
 }
 
 
