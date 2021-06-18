@@ -39,9 +39,11 @@ function suggOrChall(message, client) {
 
 function createEmbed(raw, data, isSugg) {
 
-    var embed = new Discord.MessageEmbed() // creating the embed message
-    .setTitle("💡 Suggerimento di " + raw.author.toString());
-    isSugg == true ? embed.setColor("#07D3F8") : embed.setColor("#F87807");
+   // var embed = new Discord.MessageEmbed() // creating the embed message
+   // .setTitle("💡 Suggerimento di " + raw.author.toString());
+   // isSugg == true ? embed.setColor("#07D3F8") : embed.setColor("#F87807");
+
+   client.channels.cache.get(channel_id).send(data);
 
 }
 
