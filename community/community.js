@@ -70,7 +70,7 @@ function createEmbed(message, data, client, isSugg) {
             var messageId = msg.id;
 
             embed
-                .setFooter("Suggestion ID: " + messageId)
+                .setFooter("Suggestion ID: " + messageId).setTimestamp();
 
             msg.edit(embed)
 
