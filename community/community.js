@@ -53,7 +53,8 @@ function suggOrChall(message, client) {
 function createEmbed(message, data, client, isSugg) {
 
     var embed = new Discord.MessageEmbed() // creating the embed message
-    .setTitle("💡 Suggerimento di " + message.author.toString());
+    .setTitle("💡 Suggerimento di " + message.member.user.username)
+    .setThumbnail(message.member.user.avatarURL({ dynamic: true }));
     isSugg == true ? embed.setColor("#07D3F8") : embed.setColor("#F87807");
 
     client.channels.cache.get(channel_id).send(embed);
