@@ -3,7 +3,7 @@ const bot = new Discord.Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] })
 const noswear = require("./antiswearing/antiswearing.js");
 const clear = require("./clear/clear.js");
 const rules = require("./rules/rules.js");
-const suggestions = require("./suggestions/suggestions.js");
+const community = require("./community/community.js");
 
 const prefix = "//"; // the prefix to execute every command of this bot
 
@@ -21,7 +21,7 @@ bot.on("message", (message) => {
 
     clear.clearChat(message); // command to remove a certain amount of messages in a channel (r/clear)
 
-    suggestions.makeSuggestion(message, bot); // command to add a suggestion for the server
+    community.suggOrChall(message, bot); // command to add a suggestion or a challenge for the server or for JustAPuzwick's Yt Channel
 
 
 })
