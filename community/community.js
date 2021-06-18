@@ -61,7 +61,7 @@ function createEmbed(message, data, client, isSugg) {
         .setFooter("Suggest")
         .addField("Like", "10", true)
         .addField("Disike", "10", true)
-        .addField("Percentuale", "Like: 50%\nDislike: 50%", true);
+        .addField("Opinione: 5", true);
 
     isSugg == true ? embed.setColor("#07D3F8")
         .setTitle("💡 Suggerimento di " + message.member.user.username) : embed.setColor("#F87807")
