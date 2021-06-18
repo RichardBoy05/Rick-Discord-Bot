@@ -11,11 +11,12 @@ function suggOrChall(message, client) {
         if (suggestion == "") {
 
             client.channels.cache.get(channel_id).send("Inserisci un suggerimento valido!")
-            .then(msg => {
-                msg.delete({ timeout: 3000 })})
-                message.delete({ timeout: 3000 });
+                .then(msg => {
+                    msg.delete({ timeout: 3000 })
+                })
+            message.delete({ timeout: 3000 });
 
-            return        
+            return
         }
 
         createEmbed(message, suggestion, client, true);
@@ -31,9 +32,10 @@ function suggOrChall(message, client) {
         if (challenge == "") {
 
             client.channels.cache.get(channel_id).send("Inserisci una challenge valida!")
-            .then(msg => {
-                msg.delete({ timeout: 3000 })})
-                message.delete({ timeout: 3000 });
+                .then(msg => {
+                    msg.delete({ timeout: 3000 })
+                })
+            message.delete({ timeout: 3000 });
 
             return
         }
@@ -54,15 +56,25 @@ function createEmbed(message, data, client, isSugg) {
 
     var embed = new Discord.MessageEmbed() // creating the embed message
 
-    .setThumbnail(message.member.user.avatarURL({ dynamic: true }))
-    .setDescription(data);
+        .setThumbnail(message.member.user.avatarURL({ dynamic: true }))
+        .setDescription(data)
+        .setFooter("Suggest");
     isSugg == true ? embed.setColor("#07D3F8")
-    .setTitle("💡 Suggerimento di " + message.member.user.username) : embed.setColor("#F87807")
-    .setTitle("💪 Challenge di " + message.member.user.username);
+        .setTitle("💡 Suggerimento di " + message.member.user.username) : embed.setColor("#F87807")
+            .setTitle("💪 Challenge di " + message.member.user.username);
 
-    client.channels.cache.get(channel_id).send(embed);
+    client.channels.cache.get(channel_id).send(embed)
+        .then(msg => {
+            msg.react("👍")
+            msg.react("👎")
+            var messageId = msg.id;
 
-}
+            embed
+                .setFooter("Suggestion ID: " + messageId)
+
+            msg.edit(embed)
+
+        }
 
 
 
