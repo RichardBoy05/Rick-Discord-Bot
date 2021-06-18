@@ -59,7 +59,7 @@ function createEmbed(message, data, client, isSugg) {
         .setThumbnail(message.member.user.avatarURL({ dynamic: true }))
         .setDescription(data)
         .setFooter("Suggest")
-        .addField("", "", false)
+        .addField("‎‎‎‎‎", "‎", false)
         .addField("👍 Like", "10", true)
         .addField("Disike 👎", "10", true)
         .addField("🤔 Opinione ", "5", false);
