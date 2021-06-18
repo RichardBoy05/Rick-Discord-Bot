@@ -19,9 +19,10 @@ function makeSuggestion(message, client) {
         .setColor("#0000ff")
         .setTitle("💡 Suggestions by " + message.member.user.username)
         .setDescription(suggestion)
-        .setThumbnail(message.member.user.avatarURL({ dynamic: true }))
+        .setThumbnail(message.member.user.avatarURL({ dynamic: true }));
 
         client.channels.cache.get(allsugg_id).send(embed)
+
         .then(msg => {
             msg.react("😍")
             msg.react("💩")
@@ -39,11 +40,16 @@ function makeSuggestion(message, client) {
                 totVotiPos: [],
                 totVotiNeg: []
             }
+            
+
+        })
+
 
     }
-
-
 }
+
+
+
 
 
 module.exports = { makeSuggestion };
