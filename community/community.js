@@ -18,12 +18,12 @@ function suggOrChall(message, client) {
         return
     }
 
-        // suggestions
+    // suggestions
 
-        if (message.content.startsWith(prefix + "challenge") && message.channel.id == channel_id) {
+    if (message.content.startsWith(prefix + "challenge") && message.channel.id == channel_id) {
 
-            var challenge = message.content.slice(12);
-            if (challenge == "") { }
+        var challenge = message.content.slice(12);
+        if (challenge == "") {
             client.channels.cache.get(channel_id).send("Inserisci una challenge valida!");
             return
 
@@ -33,7 +33,9 @@ function suggOrChall(message, client) {
         message.delete();
         return
 
-        //challenges
+    }
+
+    //challenges
 
 }
 
@@ -41,11 +43,11 @@ function suggOrChall(message, client) {
 
 function createEmbed(message, data, client, isSugg) {
 
-   // var embed = new Discord.MessageEmbed() // creating the embed message
-   // .setTitle("💡 Suggerimento di " + message.author.toString());
-   // isSugg == true ? embed.setColor("#07D3F8") : embed.setColor("#F87807");
+    // var embed = new Discord.MessageEmbed() // creating the embed message
+    // .setTitle("💡 Suggerimento di " + message.author.toString());
+    // isSugg == true ? embed.setColor("#07D3F8") : embed.setColor("#F87807");
 
-   client.channels.cache.get(channel_id).send(data);
+    client.channels.cache.get(channel_id).send(data);
 
 }
 
