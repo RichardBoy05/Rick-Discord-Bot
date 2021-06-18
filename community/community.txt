@@ -1,0 +1,9 @@
+-- Documentation of the suggestions system --
+
+1) Using the command //suggest in the channel #suggestions-challenges will create an embed messsage
+   with upvoats and downvotes reactions.
+2) The goal is to allow users to share their opinion and suggestions with the community and the staff.
+
+3) Using the command //challenge in the channel #suggestions-challenges will create an embed messsage
+   with upvoats and downvotes reactions.
+4) The goal is to allow users to share their ideas for improving JustAPuzwick's Yt Channel's content.
