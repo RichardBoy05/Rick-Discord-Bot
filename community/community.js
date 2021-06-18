@@ -13,7 +13,7 @@ function suggOrChall(message, client) {
             return
         }
 
-        createEmbed(message, suggestion, true);
+        createEmbed(message, suggestion, client, true);
         message.delete();
 
         // suggestions
@@ -27,7 +27,7 @@ function suggOrChall(message, client) {
 
         }
 
-        createEmbed(message, challenge, false);
+        createEmbed(message, challenge, client, false);
         message.delete();
 
         //challenges
@@ -37,10 +37,10 @@ function suggOrChall(message, client) {
 
 
 
-function createEmbed(raw, data, isSugg) {
+function createEmbed(message, data, client, isSugg) {
 
    // var embed = new Discord.MessageEmbed() // creating the embed message
-   // .setTitle("💡 Suggerimento di " + raw.author.toString());
+   // .setTitle("💡 Suggerimento di " + message.author.toString());
    // isSugg == true ? embed.setColor("#07D3F8") : embed.setColor("#F87807");
 
    client.channels.cache.get(channel_id).send(data);
