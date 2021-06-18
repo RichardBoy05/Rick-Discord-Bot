@@ -12,6 +12,7 @@ function makeSuggestion(message, client) {
 
         if (suggestion == ""){
             client.channels.cache.get(makesugg_id).send("Inserisci un suggerimento valido!");
+            return
         }
 
         var embed = new Discord.MessageEmbed()
@@ -20,7 +21,24 @@ function makeSuggestion(message, client) {
         .setDescription(suggestion)
         .setThumbnail(message.member.user.avatarURL({ dynamic: true }))
 
-        client.channels.cache.get(allsugg_id).send(embed);
+        client.channels.cache.get(allsugg_id).send(embed)
+        .then(msg => {
+            msg.react("😍")
+            msg.react("💩")
+            var messageId = msg.id;
+
+            embed
+            .setFooter("Suggestion ID: " + messageId)
+
+            msg.edit(embed)
+
+            suggestions[messageId] = {
+                suggerimento: contenuto,
+                user: message.member.user.id,
+                messageId: messageId,
+                totVotiPos: [],
+                totVotiNeg: []
+            }
 
     }
 
