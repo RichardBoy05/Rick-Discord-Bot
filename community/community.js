@@ -76,7 +76,7 @@ function createEmbed(message, data, client, isSugg) {
 
         })
 
-
+    }
 
 
 
