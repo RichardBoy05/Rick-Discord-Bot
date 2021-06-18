@@ -58,7 +58,11 @@ function createEmbed(message, data, client, isSugg) {
 
         .setThumbnail(message.member.user.avatarURL({ dynamic: true }))
         .setDescription(data)
-        .setFooter("Suggest");
+        .setFooter("Suggest")
+        .addField("Like", "10", true)
+        .addField("Disike", "10", true)
+        .addField("Percentuale", "Like: 50%\nDislike: 50%", true);
+
     isSugg == true ? embed.setColor("#07D3F8")
         .setTitle("💡 Suggerimento di " + message.member.user.username) : embed.setColor("#F87807")
             .setTitle("💪 Challenge di " + message.member.user.username);
