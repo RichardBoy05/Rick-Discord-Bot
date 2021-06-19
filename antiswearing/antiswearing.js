@@ -74,7 +74,7 @@ function warnsystem(data, bot) {
 }
 
 
-module.exports = { warnsystem };
+module.exports = { warnsystem, checkText };
 
 
 
