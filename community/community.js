@@ -58,11 +58,7 @@ function createEmbed(message, data, client, isSugg) {
 
         .setThumbnail(message.member.user.avatarURL({ dynamic: true }))
         .setDescription(data)
-        .setFooter("Suggest")
-        .addField("‎‎‎‎‎", "‎", false)
-        .addField("👍 Like", "10", true)
-        .addField("Disike 👎", "10", true)
-        .addField("🤔 Opinione ", "5", false);
+        .setFooter("Suggest");
 
     isSugg == true ? embed.setColor("#07D3F8")
         .setTitle("💡 Suggerimento di " + message.member.user.username) : embed.setColor("#F87807")
@@ -81,7 +77,7 @@ function createEmbed(message, data, client, isSugg) {
 
         })
 
-    }
+}
 
 
 
