@@ -3,14 +3,14 @@ const prefix = "//";
 const channel_id = "851438938044104724";
 
 
-function suggOrChall(message, client) {
+function suggOrChall(message) {
 
     if (message.content.startsWith(prefix + "suggest") && message.channel.id == channel_id) {
 
         var suggestion = message.content.slice(10);
         if (suggestion == "") {
 
-            client.channels.cache.get(channel_id).send("Inserisci un suggerimento valido!")
+            message.channel.send("Inserisci un suggerimento valido!")
                 .then(msg => {
                     msg.delete({ timeout: 3000 })
                 })
@@ -19,9 +19,20 @@ function suggOrChall(message, client) {
             return
         }
 
-        createEmbed(message, suggestion, client, true);
+        createEmbed(message, suggestion, true);
         message.delete();
+
         return
+    } else {
+
+        if(!message.member.roles.cache.has("849207774541250590")){
+            message.delete();
+            message.channel.send("Utilizza il canale solo per proporre suggerimenti o challenge con gli specifici comandi //suggest[suggerimento] e //challenge [challenge]")
+            .then(msg => {
+                msg.delete({ timeout: 3000 })
+            })
+        }
+
     }
 
     // suggestions
@@ -31,7 +42,7 @@ function suggOrChall(message, client) {
         var challenge = message.content.slice(12);
         if (challenge == "") {
 
-            client.channels.cache.get(channel_id).send("Inserisci una challenge valida!")
+            message.channel.send("Inserisci una challenge valida!")
                 .then(msg => {
                     msg.delete({ timeout: 3000 })
                 })
@@ -40,7 +51,7 @@ function suggOrChall(message, client) {
             return
         }
 
-        createEmbed(message, challenge, client, false);
+        createEmbed(message, challenge, false);
         message.delete();
         return
 
@@ -52,7 +63,7 @@ function suggOrChall(message, client) {
 
 
 
-function createEmbed(message, data, client, isSugg) {
+function createEmbed(message, data, isSugg) {
 
     var embed = new Discord.MessageEmbed() // creating the embed message
 
@@ -64,7 +75,7 @@ function createEmbed(message, data, client, isSugg) {
         .setTitle("💡 Suggerimento di " + message.member.user.username) : embed.setColor("#F87807")
             .setTitle("💪 Challenge di " + message.member.user.username);
 
-    client.channels.cache.get(channel_id).send(embed)
+    message.channel.send(embed)
         .then(msg => {
             msg.react("👍")
             msg.react("👎")
