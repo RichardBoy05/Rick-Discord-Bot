@@ -1,0 +1,3 @@
+-- Documentaion for theModeration System -
+
+1) This system provides quick commands to execute moderation action like muting, kicking and banning.
