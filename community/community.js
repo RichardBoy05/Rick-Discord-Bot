@@ -29,7 +29,7 @@ function suggOrChall(message) {
             message.delete();
             message.channel.send("Utilizza il canale solo per proporre suggerimenti o challenge con gli specifici comandi //suggest[suggerimento] e //challenge [challenge]")
             .then(msg => {
-                msg.delete({ timeout: 3000 })
+                msg.delete({ timeout: 10000 })
             })
         }
 
