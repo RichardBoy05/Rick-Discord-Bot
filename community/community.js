@@ -94,8 +94,7 @@ function createEmbed(message, data, isSugg) {
             msg.react("👎")
             var messageId = msg.id;
 
-            embed
-                .setFooter("Suggestion ID: " + messageId).setTimestamp();
+            isSugg == true ? embed.setFooter("Suggestion ID: " + messageId).setTimestamp() : embed.setFooter("Challenge ID: " + messageId).setTimestamp();
 
             msg.edit(embed)
 
