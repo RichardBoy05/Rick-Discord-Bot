@@ -11,7 +11,7 @@ function suggOrChall(message) {
         var suggestion = message.content.slice(10);
         if (suggestion == "") {
 
-            message.channel.send("Inserisci un suggerimento valido!")
+            message.channel.send("Inserisci un suggerimento valido!" + message.author.toString())
                 .then(msg => {
                     msg.delete({ timeout: 3000 })
                 })
@@ -39,7 +39,7 @@ function suggOrChall(message) {
         var challenge = message.content.slice(12);
         if (challenge == "") {
 
-            message.channel.send("Inserisci una challenge valida!")
+            message.channel.send("Inserisci una challenge valida!" + message.author.toString())
                 .then(msg => {
                     msg.delete({ timeout: 3000 })
                 })
@@ -62,7 +62,7 @@ function suggOrChall(message) {
 
         if (!message.member.roles.cache.has("849207774541250590") && !message.member.roles.cache.has("849234240284655626")) {
             message.delete();
-            message.channel.send("Utilizza il canale solo per proporre suggerimenti o challenge con gli specifici comandi //suggest[suggerimento] e //challenge [challenge]")
+            message.channel.send("Utilizza il canale solo per proporre suggerimenti o challenge con gli specifici comandi //suggest[suggerimento] e //challenge [challenge] "+ message.author.toString())
                 .then(msg => {
                     msg.delete({ timeout: 10000 })
                 })
