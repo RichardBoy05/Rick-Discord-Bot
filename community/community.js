@@ -60,7 +60,7 @@ function suggOrChall(message) {
 
     } else {
 
-        if (!message.member.roles.cache.has("849207774541250590") && !message.member.roles.cache.has("849234240284655626")) {
+        if (!message.member.roles.cache.has("849207774541250590") && !message.member.roles.cache.has("849234240284655626") && message.channel.id == channel_id) {
             message.delete();
             message.channel.send("Utilizza il canale solo per proporre suggerimenti o challenge con gli specifici comandi //suggest[suggerimento] e //challenge [challenge] "+ message.author.toString())
                 .then(msg => {
