@@ -21,11 +21,7 @@ function suggOrChall(message) {
         }
 
         if (checkText(suggestion) == true) {
-            message.channel.send("Non utilizzare termini volgari in questo canale!")
-                .then(msg => {
-                    msg.delete({ timeout: 3000 })
-                })
-            message.delete({ timeout: 3000 });
+            message.delete();
 
             return
         }
@@ -52,12 +48,8 @@ function suggOrChall(message) {
             return
         }
 
-        if (checkText(suggestion) == true) {
-            message.channel.send("Non utilizzare termini volgari in questo canale!")
-                .then(msg => {
-                    msg.delete({ timeout: 3000 })
-                })
-            message.delete({ timeout: 3000 });
+        if (checkText(challenge) == true) {
+            message.delete();
 
             return
         }
