@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const { checkText } = require("../antiswearing/antiswearing");
 const prefix = "//";
 const channel_id = "851438938044104724";
 
@@ -11,6 +12,16 @@ function suggOrChall(message) {
         if (suggestion == "") {
 
             message.channel.send("Inserisci un suggerimento valido!")
+                .then(msg => {
+                    msg.delete({ timeout: 3000 })
+                })
+            message.delete({ timeout: 3000 });
+
+            return
+        }
+
+        if (checkText(suggestion) == true) {
+            message.channel.send("Non utilizzare termini volgari in questo canale!")
                 .then(msg => {
                     msg.delete({ timeout: 3000 })
                 })
@@ -33,6 +44,16 @@ function suggOrChall(message) {
         if (challenge == "") {
 
             message.channel.send("Inserisci una challenge valida!")
+                .then(msg => {
+                    msg.delete({ timeout: 3000 })
+                })
+            message.delete({ timeout: 3000 });
+
+            return
+        }
+
+        if (checkText(suggestion) == true) {
+            message.channel.send("Non utilizzare termini volgari in questo canale!")
                 .then(msg => {
                     msg.delete({ timeout: 3000 })
                 })
