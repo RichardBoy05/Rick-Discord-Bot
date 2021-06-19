@@ -21,7 +21,7 @@ bot.on("message", (message) => {
 
     clear.clearChat(message); // command to remove a certain amount of messages in a channel (r/clear)
 
-    community.suggOrChall(message, bot); // command to add a suggestion or a challenge for the server or for JustAPuzwick's Yt Channel
+    community.suggOrChall(message); // command to add a suggestion or a challenge for the server or for JustAPuzwick's Yt Channel
 
 
 })
