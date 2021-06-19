@@ -4,6 +4,9 @@ const noswear = require("./antiswearing/antiswearing.js");
 const clear = require("./clear/clear.js");
 const rules = require("./rules/rules.js");
 const community = require("./community/community.js");
+const mute = require("./moderation/mute.js");
+const kick = require("./moderation/kick.js");
+const ban = require("./moderation/ban.js"); 
 
 const prefix = "//"; // the prefix to execute every command of this bot
 
