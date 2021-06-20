@@ -26,7 +26,7 @@ bot.on("message", (message) => {
 
     community.suggOrChall(message); // command to add a suggestion or a challenge for the server or for JustAPuzwick's Yt Channel
 
-    kick.kickUser(message); // kicka un utente col il comando //kick @utente : [motivo]
+    kick.kickUser(message, bot); // kicka un utente col il comando //kick @utente : [motivo]
 
 
 })
