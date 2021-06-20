@@ -28,11 +28,13 @@ function kickUser(message, client){
             message.channel.send("Il bot non ha il permesso di espellere questo utente!");
         }
 
-        user.kick();
+        
         message.channel.send("Comando eseguito!");
 
         var mod_channel = client.channels.cache.get(mod_channel_id);
         mod_channel.send("L'utente " + user + " è stato kickato da " + message.author.toString() + "con la seguente motivazione: " + reason);
+
+        user.kick();
 
 
 
