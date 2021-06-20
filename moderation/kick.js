@@ -38,7 +38,7 @@ function kickUser(message, client) {
         message.channel.send("Comando eseguito!");
 
         var mod_channel = client.channels.cache.get(mod_channel_id);
-        mod_channel.send("L'utente " + user.toString() + " è stato kickato da " + message.author.toString() + " con la seguente motivazione: '" + reason + "'");
+        mod_channel.send("L'utente " + user.toString() + " è stato kickato da " + message.author.toString() + " con la seguente motivazione: '" + reason + "'.");
 
         user.kick();
 
