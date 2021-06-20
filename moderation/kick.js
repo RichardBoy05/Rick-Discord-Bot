@@ -28,3 +28,5 @@ function kickUser(message){
 
     }
 }
+
+module.exports = { kickUser }
