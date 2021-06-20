@@ -9,7 +9,7 @@ function kickUser(message, client) {
         var user = message.mentions.members.first();
 
         if (!message.member.hasPermission("KICK_MEMBERS")) {
-            message.channel.send("Non hai il permesso di esguire questo comando!");
+            message.channel.send("Non hai il permesso di eseguire questo comando!");
             return;
         }
 
@@ -20,6 +20,7 @@ function kickUser(message, client) {
 
         if (!user.kickable) {
             message.channel.send("Il bot non ha il permesso di espellere questo utente!");
+            return;
         }
 
         if (message.toString().indexOf(split) == -1) {
