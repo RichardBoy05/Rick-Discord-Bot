@@ -7,7 +7,7 @@ function kickUser(message, client){
     if (message.content.startsWith(prefix + "kick")){
 
         var user = message.mentions.members.first();
-        var reason = message.toString().substring(message.toString().indexOf(split) + 1);
+        var reason = message.toString().substring(message.toString().indexOf(split) + 1, message.toString().length);
 
         if (reason == ""){
             message.channel.send("Aggiungi il motivo del kick!");
@@ -32,7 +32,7 @@ function kickUser(message, client){
         message.channel.send("Comando eseguito!");
 
         var mod_channel = client.channels.cache.get(mod_channel_id);
-        mod_channel.send("L'utente " + user + " è stato kickato da " + message.author.toString() + "con la seguente motivazione: " + reason);
+        mod_channel.send("L'utente " + user.toString() + " è stato kickato da " + message.author.toString() + "con la seguente motivazione: " + reason);
 
         user.kick();
 
