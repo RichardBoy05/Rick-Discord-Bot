@@ -1,7 +1,7 @@
 const mod_channel_id = "850329118914641951";
 const prefix = "//";
 
-function kickuser(message){
+function kickUser(message){
 
     if (message.content.startsWith(prefix + "kick")){
 
