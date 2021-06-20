@@ -2,7 +2,7 @@ const mod_channel_id = "850329118914641951";
 const prefix = "//";
 const split = ':';
 
-function kickUser(message){
+function kickUser(message, client){
 
     if (message.content.startsWith(prefix + "kick")){
 
@@ -30,7 +30,9 @@ function kickUser(message){
 
         user.kick();
         message.channel.send("Comando eseguito!");
-        mod_channel_id.send("L'utente " + user + " è stato kickato da " + message.author.toString() + "con la seguente motivazione: " + reason);
+
+        var mod_channel = client.channels.cache.get(mod_channel_id);
+        mod_channel.send("L'utente " + user + " è stato kickato da " + message.author.toString() + "con la seguente motivazione: " + reason);
 
 
 
