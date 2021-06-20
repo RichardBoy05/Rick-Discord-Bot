@@ -7,7 +7,7 @@ function kickUser(message){
     if (message.content.startsWith(prefix + "kick")){
 
         var user = message.mentions.members.first();
-        var reason = message.substring(message.toString().indexOf(split) + 1);
+        var reason = message.toString().substring(message.toString().indexOf(split) + 1);
 
         if (reason == ""){
             message.channel.send("Aggiungi il motivo del kick!");
