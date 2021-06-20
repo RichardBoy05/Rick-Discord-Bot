@@ -7,6 +7,11 @@ function kickUser(message, client){
     if (message.content.startsWith(prefix + "kick")){
 
         var user = message.mentions.members.first();
+
+        if (message.toString().indexOf(split) == null){
+            message.channel.send("Errore nella sintassi del messaggio (//kick @user : [motivo])");
+        }
+        
         var reason = message.toString().substring(message.toString().indexOf(split) + 1, message.toString().length);
 
         if (reason == ""){
@@ -32,7 +37,7 @@ function kickUser(message, client){
         message.channel.send("Comando eseguito!");
 
         var mod_channel = client.channels.cache.get(mod_channel_id);
-        mod_channel.send("L'utente " + user.toString() + " è stato kickato da " + message.author.toString() + "con la seguente motivazione: " + reason);
+        mod_channel.send("L'utente " + user.toString() + " è stato kickato da " + message.author.toString() + " con la seguente motivazione: " + reason);
 
         user.kick();
 
