@@ -11,7 +11,9 @@ function kickUser(message, client){
         if (message.toString().indexOf(split) == null){
             message.channel.send("Errore nella sintassi del messaggio (//kick @user : [motivo])");
         }
-        
+
+        message.channel.send(message.toString().indexOf(split));
+
         var reason = message.toString().substring(message.toString().indexOf(split) + 1, message.toString().length);
 
         if (reason == ""){
